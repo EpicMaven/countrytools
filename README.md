@@ -27,28 +27,23 @@ https://github.com/EpicMaven/countrytools
 3. Create a country object by name:
    The name is the country is defined by the official ISO name, which may not be
    the colloquial name.
-
-```
-us = CountryTools::CountryFactory.find_by_iso_3166_digraph("United States")
-```
+   ```
+   us = CountryTools::CountryFactory.find_by_iso_3166_digraph("United States")
+   ```
 
 4. Create a country object by ISO 3166 digraph
-
-```
-germany = CountryTools::CountryFactory.find_by_iso_3166_digraph("de")
-```
-
-  or shorter
-
-```
-germany = CountryTools::CountryFactory.find_by_iso_digraph("de")
-```
+   ```
+   germany = CountryTools::CountryFactory.find_by_iso_3166_digraph("de")
+   ```
+   or shorter
+   ```
+   germany = CountryTools::CountryFactory.find_by_iso_digraph("de")
+   ```
 
 5. Create a country object by FIPS
-
-```
-us = CountryTools::CountryFactory.find_by_iso_3166_digraph("us")
-```
+   ```
+   us = CountryTools::CountryFactory.find_by_iso_3166_digraph("us")
+   ```
 
 ## Contributing
 
