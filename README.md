@@ -8,23 +8,21 @@ https://github.com/EpicMaven/countrytools
 ## Getting Started
 
 1. Install CountryTools at the command prompt if you haven't yet:
-
-```
-gem install countrytools
-```
+   ```
+   gem install countrytools
+   ```
 
 2. Create a country object by any identifier:
    Any of the types of identifiers (e.g., ISO code, TLD, etc) can be used.
    CountryTools will cascade through the identifiers to find a match.
-
-```
-us = CountryTools::Country.find("United States")
-us = CountryTools::Country.find("us")
-us = CountryTools::Country.find("USA")
-us = CountryTools::Country.find("840")
-us = CountryTools::Country.find(840)
-us = CountryTools::Country.find(".us")
-```
+   ```
+   us = CountryTools::Country.find("United States")
+   us = CountryTools::Country.find("us")
+   us = CountryTools::Country.find("USA")
+   us = CountryTools::Country.find("840")
+   us = CountryTools::Country.find(840)
+   us = CountryTools::Country.find(".us")
+   ```
 
 3. Create a country object by name:
    The name is the country is defined by the official ISO name, which may not be
