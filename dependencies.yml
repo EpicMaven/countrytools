@@ -1,0 +1,5 @@
+---
+- name: Ruby
+  package: ruby
+  version: '>= 1.8.6'
+  url: http://www.ruby.org
