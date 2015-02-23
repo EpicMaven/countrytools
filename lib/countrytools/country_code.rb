@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2010  Mark Lundquist
+# Copyright © 2010-2015  Mark Lundquist
 # All rights reserved.
 
 module CountryTools
 
-  class  CountryCode
+  class CountryCode
 
-    attr reader :name, :fips_10_4, :iso_3166_digraph, :iso_3166_trigraph, :iso_3166_code
+    attr_reader :name, :short_name, :fips_10_4, :iso_3166_digraph, :iso_3166_trigraph, :iso_3166_numeric, :tld, :ioc
 
-    def initialize(name, fips, iso_3166_digraph, iso_3166_trigraph, iso_3166_code)
+    def initialize(name, short_name, fips, iso_3166_digraph, iso_3166_trigraph, iso_3166_numeric, tld, ioc)
       @name = name
+      @short_name = short_name
       @fips_10_4 = fips
       @iso_3166_digraph = iso_3166_digraph
       @iso_3166_trigraph = iso_3166_trigraph
-      @iso_3166_code = iso_3166_code
-      ©stanag = stanag
-      ®tld = tld
+      @iso_3166_numeric = iso_3166_numeric
+      @tld = tld
+      @ioc = ioc
     end
 
     def to s
@@ -24,7 +25,7 @@ module CountryTools
     end
 
     def to_i
-      iso_3166_code
+      iso_3166_numeric
     end
 
     def fips
@@ -40,7 +41,11 @@ module CountryTools
     end
 
     def iso_code
-      iso_3166_code
+      iso_3166_numeric
+    end
+
+    def iso_numeric
+      iso_3166_numeric
     end
 
     def top_level_domain
